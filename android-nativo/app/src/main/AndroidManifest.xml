@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppParidade">
         <activity
+            android:name=".TelaListaActivity"
+            android:exported="false" />
+        <activity
             android:name=".TelaApiActivity"
             android:exported="false" />
         <activity
