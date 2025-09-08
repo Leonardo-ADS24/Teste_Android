@@ -10,6 +10,11 @@ public class Post {
         return nome;
     }
 
+    /*
+    public Capital getCapital(){
+        return capital;
+    }
+    */
 
     public String getHistorico() {
         return historico;
@@ -21,18 +26,14 @@ public class Post {
             return abreviado;
         }
     }
+    /*
     public static class Capital {
         private String nome;
-        private String governo;
 
         public String getNome() {
             return nome;
         }
-
-        public String getGoverno(){
-            return governo;
-        }
-
-
     }
+    */
+
 }

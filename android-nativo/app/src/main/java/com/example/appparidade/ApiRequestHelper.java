@@ -32,16 +32,12 @@ public class ApiRequestHelper {
                 if (response.isSuccessful() && response.body() != null) {
                     String jsonData = response.body().string();
 
-                    // AQUI está a mudança crucial:
-                    // Define o tipo de objeto que o Gson deve esperar (uma lista de objetos Pais)
                     Type paisListType = new TypeToken<List<Post>>(){}.getType();
 
-                    // Converte o JSON para uma lista de objetos Pais
                     List<Post> paises = gson.fromJson(jsonData, paisListType);
 
-                    // Agora, verifique se a lista não está vazia
                     if (!paises.isEmpty()) {
-                        Post pais = paises.get(0); // Pega o primeiro (e único) item da lista
+                        Post pais = paises.get(0);
 
                         String nomePais = pais.getNome().getAbreviado();
                         //String nomeCapital = pais.getCapital().getNome();
@@ -55,7 +51,6 @@ public class ApiRequestHelper {
                             listener.onSuccess(respostaFormatada);
                         }
                     } else {
-                        // Se a lista estiver vazia, significa que o ID não foi encontrado
                         if (listener != null) {
                             listener.onFailure("ID de país não encontrado.");
                         }
