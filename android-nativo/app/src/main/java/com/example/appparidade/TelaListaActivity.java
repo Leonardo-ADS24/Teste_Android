@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.List;
+import androidx.appcompat.widget.SearchView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,7 +24,9 @@ import androidx.core.view.WindowInsetsCompat;
 public class TelaListaActivity extends AppCompatActivity {
 
     RecyclerView recyclerView;
+    SearchView searchView;
     List<Item> lista = new ArrayList<>();
+    ItemAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,10 +35,26 @@ public class TelaListaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_tela_lista);
 
         recyclerView = findViewById(R.id.recyclerView);
+        searchView = findViewById(R.id.searchView);
         carregarDadosJSON();
 
+        adapter = new ItemAdapter(this, lista);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(new ItemAdapter(this, lista));
+        recyclerView.setAdapter(adapter);
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                adapter.filtrar(query);
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                adapter.filtrar(newText);
+                return false;
+            }
+        });
     }
 
     private void carregarDadosJSON() {

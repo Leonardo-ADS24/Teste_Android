@@ -6,5 +6,18 @@
   {
     "nome": "Rússia",
     "descricao": "A Federação da Rússia[nota 1] (em russo: Российская Федерация, Rossiiskaia Federatsia, pronúncia russa: [rɐˈsʲijskəjə fʲɪdʲɪˈratsɨjə] (escutarⓘ)),[18] ou simplesmente chamada de Rússia (em russo: Росси́я, transl. Rossía, pronúncia russa: [rɐˈsʲijə] (escutarⓘ)), é um país localizado no norte da Eurásia,[19] com área de 17 075 400 quilómetros quadrados. É o maior país do planeta, cobrindo mais de um nono da superfície terrestre. É também o nono país mais populoso, com 146 milhões de habitantes e o país mais populoso da Europa.[20][21] Faz fronteira com os seguintes países, de noroeste para sudeste: Noruega, Finlândia, Estónia, Letónia, Lituânia e Polónia (as duas últimas através do exclave de Kaliningrado), Bielorrússia, Ucrânia, Geórgia, Azerbaijão, Cazaquistão, China, Mongólia e Coreia do Norte. Também tem fronteiras marítimas com o Japão, pelo Mar de Okhotsk e pelo Mar do Japão, e com os Estados Unidos, pelo Estreito de Bering."
+  },
+  { "nome":"Brasil",
+    "descricao": "O Brasil, maior país da América do Sul, destaca-se por sua vasta extensão territorial e diversidade natural e cultural. Com mais de 213 milhões de habitantes, sendo a maioria em áreas urbanas, o país combina modernidade e tradição. Sua economia, embora liderada pelo setor de serviços, mantém relevância mundial em segmentos como a indústria petroquímica, automobilística e, sobretudo, na produção agropecuária, onde a soja se consolidou como principal destaque."
+  },
+  { "nome":"Argentina",
+    "descricao": "Reconhecida pelo tango e pela paixão pelo futebol, a Argentina exerce grande influência cultural e esportiva na América Latina. Sua produção agropecuária e vinícola é destaque global."
+  },
+  { "nome":"Chile",
+    "descricao": "País andino de geografia singular, o Chile se notabiliza pela estabilidade econômica e pelas exportações de cobre e vinhos. Sua cordilheira é símbolo natural de impacto mundial."
+  },
+  { "nome": "Peru",
+    "Peru": "O Peru guarda heranças históricas únicas, como Machu Picchu, símbolo da civilização inca. Além da relevância cultural, tem crescimento no turismo e na exploração de recursos minerais.1."
   }
-]
+  ]
+

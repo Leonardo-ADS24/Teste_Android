@@ -9,14 +9,15 @@ import android.widget.TextView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
-
+import java.util.ArrayList;
 public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
     private List<Item> lista;
+    private List<Item> listaOriginal;
     private Context context;
-
     public ItemAdapter(Context context, List<Item> lista) {
         this.context = context;
-        this.lista = lista;
+        this.lista = new ArrayList<>(lista); // lista atual (filtrada)
+        this.listaOriginal = new ArrayList<>(lista);
     }
 
     @Override
@@ -50,5 +51,21 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> {
             super(itemView);
             textNome = itemView.findViewById(R.id.textNome);
         }
+    }
+
+    // Método de filtro
+    public void filtrar(String texto) {
+        lista.clear();
+        if (texto.isEmpty()) {
+            lista.addAll(listaOriginal);
+        } else {
+            texto = texto.toLowerCase();
+            for (Item item : listaOriginal) {
+                if (item.getNome().toLowerCase().contains(texto)) {
+                    lista.add(item);
+                }
+            }
+        }
+        notifyDataSetChanged();
     }
 }

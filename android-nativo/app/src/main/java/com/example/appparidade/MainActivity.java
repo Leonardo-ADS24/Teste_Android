@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         Button ButtonTelaAPI = findViewById(R.id.button_tela_API);
         Button ButtonTelaLista = findViewById(R.id.button_tela_Lista);
+        Button ButtonNativo = findViewById(R.id.button_tela_Nativo);
 
         ButtonTelaAPI.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +35,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, TelaListaActivity.class);
                 startActivity(intent);
+            }
+        });
 
+        ButtonNativo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,NativoActivity.class);
+                startActivity(intent);
             }
         });
 
